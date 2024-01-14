@@ -24,7 +24,9 @@ const RestaurantMenu = () =>{
     
        const {name, cuisines, costForTwoMessage } = resInfo?.cards[0]?.card?.card?.info;
     
-       const {itemCards} = resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
+    const {itemCards} = resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[3]?.card?.card?.categories[0];
+   
+       
 
    return (
         <div className="menu">
@@ -40,7 +42,6 @@ const RestaurantMenu = () =>{
                     </li>
                 ))}
             </ul>
-            
         </div>
     )
 }

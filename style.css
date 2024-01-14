@@ -38,6 +38,9 @@
     border-radius: 5px;
     margin: 10px;
     margin-top: 50px;
+    text-decoration:none !important;
+
+    color: black;
 }
 .res-card:hover{
     border: 1px solid rgb(167, 164, 164);
@@ -89,6 +92,12 @@
     padding: 0px 5px;
     cursor: pointer;
     color: black;
-    background-color: rgb(211, 159, 159);
+    background-color: #f0f0f0;
+    border: 1px solid rgb(88, 99, 110);
+    border-radius:6px ;
+    box-shadow: inset;
 }
 
+Link{
+    text-decoration: none !important;
+}

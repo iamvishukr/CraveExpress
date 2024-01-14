@@ -17,13 +17,13 @@ const Header = () => {
           </div>
           <div className="nav-items">
               <ul>
-                <Link to= "/"> 
+                <Link style={{textDecoration: 'none', color: 'black'}}  to= "/"> 
                  <li> Home </li> 
                 </Link> 
-                <Link to= "/about">
+                <Link style={{textDecoration: 'none', color: 'black'}} to= "/about">
                    <li> About </li>
                   </Link>
-                <Link to= "/contact"> 
+                <Link style={{textDecoration: 'none', color: 'black'}} to= "/contact"> 
                   <li> Contact </li> 
                 </Link>
                   <li>Cart</li>
