@@ -1,5 +1,5 @@
 import RestaurantCard, {withPromotedLabel} from "./RestaurantCard";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import ShimmerCards from "./ShimmerCards";
 import { Link } from "react-router-dom";
 
@@ -33,7 +33,7 @@ const Body = () => {
         <div className="body md:items-center  sm:bg-purple-100 md:bg-pink-100 lg:bg-white sm:flex-row flex-wrap">
             <div className="filter flex m-4 justify-end items-center">
                 <div className="search m-4  border border-solid border-black flex  ">
-                    <input type="text" className="search-box px-20 " value={searchText} 
+                    <input type="text" className="search-box w-80 px-4" value={searchText} 
                     onChange={(e)=>{
                         setSearchText(e.target.value);
                     }} />
@@ -57,6 +57,8 @@ const Body = () => {
             }}
                 >Top Rated</button>
             </div>
+
+            
             
                 
             <div className="restaurant-container flex flex-wrap ml-16 gap-1 "/*re-using card component*/>  

@@ -1,14 +1,22 @@
+import { useState } from "react";
 import ItemList from "./ItemList";
 
-const RestaurantCategory = ({data}) => {
+const RestaurantCategory = ({data, showItems, setIndex}) => {
+
+  // const [showItems, setShowItems] = useState(false);            --- Uncontrolled-component (we are not rely  on parent div)
+   const handleClick =()=>{
+  //   setShowItems(!showItems);
+   //    setShowIndex(!showIndex);
+          setIndex();
+   }
     return (
-        <div>
-            <div className=" mt-4 mb-4 shadow-xl border border-gray p-4 bg-slate-50 m-auto w-6/12" >
+        <div className="cursor-pointer" >
+            <div className=" mt-4 mb-4  p-4 m-auto w-7/12 border border-gray-200 bg-gray-50" >
               <div className="flex justify-between ">
               <span className="font-bold text-lg">{data.title} ({data.itemCards.length})</span>
-                <span>{'🔽'}</span>
+                <span onClick={handleClick}>{'🔽'}</span>
               </div>
-                <ItemList items= {data.itemCards} />
+                {showItems && <ItemList items= {data.itemCards} />}
             </div>
         </div>
     )
