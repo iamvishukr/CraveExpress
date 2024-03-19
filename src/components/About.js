@@ -9,7 +9,7 @@ function About() {
             <h2 className="text-center text-4xl p-3 mt-12">This is a food ordering app made by Vishal Kumar.</h2>
              <User/> 
 
-{/*            this is how we can use context in class based component
+{/*  this is how we can use context in class based component since we can't use Hooks here !!!
 
             <div>
               <UserContext.Consumer>
@@ -20,7 +20,7 @@ function About() {
             </div>
                                                                         */}
 
-                                                                        
+
     </div>
   )
 }

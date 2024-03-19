@@ -13,7 +13,7 @@ const RestaurantMenu = () =>{
     const {resId} = useParams();
     //const [showIndex, setShowIndex] = useState();
 
-    const [id, setId] = useState(1); // this should be here(above the return) or will cause 'rendered more hooks than previous'
+    const [id, setId] = useState(0); // this should be here(above the return) or will cause 'rendered more hooks than previous'
 
     const resInfo = useRestaurantMenu(resId);
     // useEffect(() => {
@@ -54,7 +54,7 @@ const RestaurantMenu = () =>{
             setIndex={
                 () => {
                   if (id === index)
-                    setId(-1); // to toggle the current toggled category
+                    setId(-1 ); // to toggle the current toggled category
                   else
                     setId(index) 
                 }
