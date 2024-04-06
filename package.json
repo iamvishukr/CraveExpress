@@ -32,7 +32,7 @@
   "name": "craveexpress",
   "description": "/*\r Header \r -Logo\r -Nav Items",
   "version": "1.0.0",
-  "main": "babel.config.js",
+  "main": "babel.config.html",
   "keywords": [],
   "author": "",
   "license": "ISC"

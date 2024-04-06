@@ -18,10 +18,10 @@ const Header = () => {
   
   const [BtnNameReact, setBtnNameReact] = useState("Login");
     return (
-      <div className="header flex justify-between shadow-md m-2">
+      <div className="header flex justify-between  shadow-md m-2">
           <div className="">
               <img
-                className='w-[100px]  '
+                className='md:w-[100px] w-[30px]   '
                 src={LOGO_URL}
               />
           </div>
@@ -53,9 +53,9 @@ const Header = () => {
                   <li className="border absolute border-yellow-600 p-1 pl-2 pr-2 bg-yellow-300 hover:bg-yellow-500 rounded-xl "><p className="online" >{onlineStatus ? "online" : "offline"}</p></li>
                 </span>
                   
-                  <span className="w-10">
+                  <span className="md:w-40  md:-translate-y-0 -translate-y-3">
                     <Link to='/cart'>
-                      <li className="border absolute border-yellow-600 pt-2 pb-2 font-bold  pl-4 pr-4 text-base   bg-yellow-300 hover:bg-yellow-500 rounded-xl ">Cart ({cartItems.length})</li>
+                      <li className="border absolute border-yellow-600 pt-2 pb-2 font-bold  pl-2 pr-2 text-base   bg-yellow-300 hover:bg-yellow-500 rounded-xl ">Cart ({cartItems.length})</li>
                     </Link>
                   </span>
 
