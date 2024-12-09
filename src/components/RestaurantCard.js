@@ -1,23 +1,24 @@
 import { CDN_URL } from "../utils/constants";
+
 const RestaurantCard = (props) => {
     const {resData} = props;
-    //console.log(resData); 
     const {
-      cloudinaryImageId, name, avgRating , cuisines
+      cloudinaryImageId, name, avgRating, cuisines
     } = resData?.info;
     
-     return(
-        <div className="res-card  w-[250px] p-1 m-2 mb-12 h-[420px] hover:bg shadow-2xl">
-            <img className='res-img h-44 w-64  rounded-xl shadow-2xl'
-             src={CDN_URL + cloudinaryImageId
-
-            }
+    return(
+        <div className="res-card w-64 h-full rounded-xl overflow-hidden shadow-2xl border border-gray-300  hover:shadow-yellow-200 transition-shadow duration-300 bg-white p-4">
+            <img className='h-44 w-full object-cover rounded-xl mb-4'
+             src={CDN_URL + cloudinaryImageId}
+             alt={name}
             />
-            <h3 className="font-bold text-lg my-4 text-center" >{name}</h3>
-            <h4 className="text-center">{cuisines.join(", ")}</h4>
-            <h4 className="text-center">{avgRating} Stars</h4>
-            <h4 className="text-center">{(resData.info.costForTwo)}</h4>
-            <h5 className="text-center">Delivery time - {resData.info.sla.deliveryTime} Min</h5>
+            <h3 className="font-bold text-xl mb-2  text-gray-800">{name}</h3>
+            <h4 className="text-gray-600 text-sm mb-2">{cuisines.join(", ")}</h4>
+            <div className="flex justify-between items-center">
+              <h4 className="bg-green-500 border border-green-600 text-white px-2 py-1 rounded-full text-sm">{avgRating} Stars</h4>
+              <h5 className="text-gray-600 text-sm">Delivery time - {resData.info.sla.deliveryTime} Min</h5>
+            </div>
+            <h4 className="text-gray-600 text-sm font-bold mt-2">{resData.info.costForTwo}</h4>
         </div>
     )
 }
@@ -25,15 +26,13 @@ const RestaurantCard = (props) => {
 export const withPromotedLabel = (RestaurantCard) => {
     return(props)=>{
         return(
-            <div className=" ">
-              
-                    <label className=" absolute rounded-tl-xl rounded-br-xl bg-green-500 text-white text-center rounded-none p-2 m-2 mt-1 ml-3 ">Veg</label>
-
+            <div className="relative ">
+                <label className="absolute top-2 gap-4 left-2 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full z-10">Veg</label>
                 <RestaurantCard {...props}/>
             </div>
         )
     }
 }
 
-
 export default RestaurantCard;
+
