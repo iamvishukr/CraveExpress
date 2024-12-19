@@ -17,18 +17,22 @@ const Cart = () => {
 
   const getTotalPrice = () => {
     return cartItems.reduce((total, item) => {
+      // console.log(cartItems);
+      
       const itemPrice =
         item?.card?.info?.price || item.card.info.defaultPrice || 0;
-      return total + (itemPrice / 100) * (item.quantity || 0);
+        // console.log(itemPrice);
+      return total + (itemPrice / 100);
     }, 0);
+    
   };
 
-  console.log("Cart Items:", cartItems);
-  console.log("Total Items:", getTotalItems());
+  // console.log("Cart Items:", cartItems);
+  // console.log("Total Items:", getTotalItems());
   console.log("Total Price:", getTotalPrice());
 
   return (
-    <div className="text-center bg-gray-900 min-h-screen pt-24">
+    <div className="text-center bg-gray-900 min-h-screen pt-24 pb-8">
       <h1 className="text-4xl font-bold text-yellow-500">
         Cart
         <ShoppingCart
