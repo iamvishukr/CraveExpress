@@ -16,7 +16,7 @@ const Body = () => {
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetch(
-        `https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0759837&lng=72.8776559&page=${currentPage}`
+        `https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0759837&lng=72.8776559&page=${currentPage}`
       );
 
       const json = await data.json();
