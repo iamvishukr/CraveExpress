@@ -6,7 +6,7 @@ function About() {
   return (
     <div className="bg-gray-900 min-h-screen ">
       <h1 className=" text-center text-gray-600  text-4xl font-sans pt-16 ">
-        About Us
+       This is About Us
       </h1>
       <h2 className="text-center text-4xl p-3 text-gray-600 mt-12">
         <Typewriter 
